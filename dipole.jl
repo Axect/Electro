@@ -46,10 +46,12 @@ function main()
 
   X = repmat(x', length(y), 1);
   Y = repmat(y, 1, length(x));
-  Z = map(pot2,X,Y);
+  Z = map(pot,X,Y);
+  #Z = map(pot2,X,Y);
   
   surf(x,y,Z)
-  savefig("image_dipole.png")
+  savefig("native_dipole.png")
+  #savefig("image_dipole.png")
 end
 
 main()
